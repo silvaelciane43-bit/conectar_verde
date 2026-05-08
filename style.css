@@ -1,0 +1,160 @@
+/* Configurações Gerais */
+:root {
+    --verde-escuro: #2d5a27;
+    --verde-medio: #38a169;
+    --verde-claro: #e8f5e9;
+    --cinza-fundo: #f0f2f0;
+    --branco: #ffffff;
+    --preto-texto: #333333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cinza-fundo);
+    margin: 0;
+    color: var(--preto-texto);
+}
+
+header {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Container Principal */
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Estilo dos Cards (Feed e Formulário) */
+.card {
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Estilo do Feed (Estilo Instagram) */
+.post-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.avatar {
+    width: 35px; height: 35px;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.post-images {
+    display: flex;
+    background: #fafafa;
+}
+
+.post-images img {
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid var(--branco);
+}
+
+.post-body {
+    padding: 15px;
+}
+
+.tag {
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Formulários */
+form {
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background: var(--verde-medio);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--verde-escuro);
+}
+
+/* Tabela de Ranking */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.ranking-table th {
+    text-align: left;
+    border-bottom: 2px solid var(--verde-claro);
+    padding: 10px;
+}
+
+.ranking-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Botão Flutuante */
+.btn-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--verde-escuro);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

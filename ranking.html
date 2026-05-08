@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Sustentável</title>
+    <style>
+
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f0; margin: 0; padding: 20px; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        h2 { color: #2d5a27; text-align: center; }
+        
+        /* Estilo do Pódio/Ranking */
+        .ranking-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .ranking-table th { background-color: #2d5a27; color: white; padding: 12px; text-align: left; }
+        .ranking-table td { padding: 12px; border-bottom: 1px solid #eee; }
+        .top-3 { font-weight: bold; color: #d4af37; } /* Cor dourada para os primeiros */
+
+        /* Seção de Certificados */
+        .certificates { display: flex; justify-content: space-around; margin-top: 30px; padding: 15px; background: #e8f5e9; border-radius: 10px; }
+        .badge { text-align: center; font-size: 12px; color: #2d5a27; }
+        .badge-icon { font-size: 30px; display: block; margin-bottom: 5px; }
+        
+        .nav-link { display: block; text-align: center; margin-top: 20px; color: #2d5a27; text-decoration: none; font-weight: bold; }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>🏆 Ranking de Sustentabilidade</h2>
+        <p style="text-align: center;">Confira os colaboradores que mais estão transformando nossa empresa!</p>
+
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Posição</th>
+                    <th>Funcionário</th>
+                    <th>Pontos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="top-3">
+                    <td>1º</td>
+                    <td>Ana Silva</td>
+                    <td>1250 pts</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>Carlos Souza</td>
+                    <td>1100 pts</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>Beatriz Lima</td>
+                    <td>950 pts</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>João Pedro</td>
+                    <td>800 pts</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="certificates">
+            <div class="badge">
+                <span class="badge-icon">🌿</span>
+                Mestre do 5S
+            </div>
+            <div class="badge">
+                <span class="badge-icon">💧</span>
+                Guardião da Água
+            </div>
+            <div class="badge">
+                <span class="badge-icon">💡</span>
+                Poupador de Energia
+            </div>
+        </div>
+
+        <a href="/enviar" class="nav-link">← Enviar minha ação para pontuar</a>
+    </div>
+
+</body>
+</html>
