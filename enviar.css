@@ -1,0 +1,67 @@
+/* ========== ESTILOS ESPECÍFICOS DO FORMULÁRIO (ENVIAR.HTML) ========== */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f7f4;
+}
+
+/* ========== CARD DO FORMULÁRIO ========== */
+.card {
+    background: var(--branco);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border-top: 5px solid var(--verde-escuro);
+    margin: 0 auto;
+}
+
+.card h2 {
+    color: var(--verde-escuro);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+/* ========== INPUTS ========== */
+label {
+    color: #444;
+}
+
+textarea,
+input[type="file"] {
+    border: 1px solid var(--cinza-claro);
+}
+
+textarea::placeholder {
+    color: #999;
+}
+
+/* ========== BOTÃO SUBMIT ========== */
+button[type="submit"] {
+    background: var(--verde-escuro);
+    width: 100%;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: #1e3d1a;
+}
+
+/* ========== PREVIEW DE IMAGEM ========== */
+#image-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#image-preview img {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 8px;
+    margin-top: 10px;
+}

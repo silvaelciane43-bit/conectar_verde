@@ -1,0 +1,102 @@
+/* ========== ESTILOS ESPECÍFICOS DO FEED (INDEX.HTML) ========== */
+
+body {
+    padding-bottom: 50px;
+}
+
+/* ========== POST CARDS ========== */
+.post-card {
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: var(--preto-texto);
+}
+
+.post-header .avatar {
+    width: 35px;
+    height: 35px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ========== IMAGENS DO POST ========== */
+.post-image-container {
+    display: flex;
+    background: #eee;
+}
+
+.post-image-container img {
+    width: 50%;
+    border: 1px solid var(--branco);
+    object-fit: cover;
+    height: 250px;
+}
+
+/* ========== CONTEÚDO DO POST ========== */
+.post-content {
+    padding: 15px;
+}
+
+.post-content .tag {
+    background: var(--verde-claro);
+    color: var(--verde-escuro);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.post-content p {
+    margin: 10px 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* ========== AÇÕES DO POST ========== */
+.post-actions {
+    padding: 10px 15px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-action {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    width: auto;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.btn-action:hover {
+    color: var(--verde-escuro);
+}
+
+/* ========== BOTÃO FLUTUANTE CUSTOMIZADO ========== */
+.btn-flutuante {
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

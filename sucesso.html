@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ação Enviada com Sucesso!</title>
+    <link rel="stylesheet" href="/static/css/global.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--verde-claro), var(--cinza-fundo));
+        }
+
+        .card {
+            background: var(--branco);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            max-width: 450px;
+            text-align: center;
+            border-top: 5px solid var(--verde-medio);
+        }
+
+        .success-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: bounce 0.6s ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .card h1 {
+            color: var(--verde-escuro);
+            margin: 0 0 10px 0;
+            font-size: 28px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .descricao-box {
+            background: var(--verde-claro);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--verde-medio);
+            text-align: left;
+        }
+
+        .descricao-box strong {
+            color: var(--verde-escuro);
+        }
+
+        .descricao-box p {
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--verde-medio);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--verde-escuro);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: var(--verde-escuro);
+            border: 2px solid var(--verde-medio);
+        }
+
+        .btn-secondary:hover {
+            background: var(--verde-claro);
+        }
+
+        .info-text {
+            background: #fffacd;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #666;
+            margin-top: 15px;
+            border-left: 4px solid #ffd700;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="/perfil">Meu Perfil</a>
+    </div>
+    <div class="card">
+        <div class="success-icon">✅</div>
+        
+        <h1>Parabéns!</h1>
+        <p>Sua ação sustentável foi enviada com sucesso! 🌿</p>
+
+        {% if descricao %}
+        <div class="descricao-box">
+            <strong>📝 Sua ação:</strong>
+            <p>{{ descricao }}</p>
+        </div>
+        {% endif %}
+
+        <p style="margin-top: 20px; font-weight: bold; color: var(--verde-medio);">
+            Aguarde a moderação para ganhar seus pontos! 🎯
+        </p>
+
+        <div class="info-text">
+            ⏱️ Sua ação será analisada em até 24 horas. Você receberá uma notificação quando for aprovada!
+        </div>
+
+        <div class="btn-group">
+            <a href="/" class="btn btn-primary">Ver Feed</a>
+            <a href="/ranking" class="btn btn-secondary">Ver Ranking</a>
+        </div>
+    </div>
+</body>
+</html>

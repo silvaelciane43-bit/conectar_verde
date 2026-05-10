@@ -1,0 +1,4 @@
+uploads/
+test_image.png
+__pycache__/
+*.pyc

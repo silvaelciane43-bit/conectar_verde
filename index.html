@@ -4,35 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed Sustentável - Empresa</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f2f0; margin: 0; padding-bottom: 50px; }
-        header { background-color: #2d5a27; color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
-        
-        .feed-container { max-width: 500px; margin: 20px auto; padding: 0 10px; }
-        
-        /* Estilo do Post (estilo Instagram) */
-        .post-card { background: white; border-radius: 12px; overflow: hidden; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .post-header { padding: 12px; display: flex; align-items: center; font-weight: bold; color: #333; }
-        .post-header .avatar { width: 35px; height: 35px; background: #ddd; border-radius: 50%; margin-right: 10px; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-        
-        .post-image-container { display: flex; background: #eee; }
-        .post-image-container img { width: 50%; border: 1px solid #fff; object-fit: cover; height: 250px; }
-        
-        .post-content { padding: 15px; }
-        .post-content .tag { background: #e8f5e9; color: #2d5a27; padding: 3px 8px; border-radius: 5px; font-size: 12px; font-weight: bold; }
-        .post-content p { margin: 10px 0; color: #555; line-height: 1.4; }
-        
-        .post-actions { padding: 10px 15px; border-top: 1px solid #f0f0f0; display: flex; gap: 15px; }
-        .btn-action { background: none; border: none; cursor: pointer; font-size: 14px; color: #666; display: flex; align-items: center; gap: 5px; }
-        .btn-action:hover { color: #2d5a27; }
-
-        .btn-flutuante { position: fixed; bottom: 20px; right: 20px; background: #2d5a27; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-    </style>
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/static/css/index.css">
 </head>
 <body>
 
     <header>
-        <h1>EcoFeed 🌿</h1>
+        <div style="display:flex; justify-content:space-between; align-items:center; max-width:500px; margin:0 auto;">
+            <h1>EcoFeed 🌿</h1>
+            <a href="/perfil" style="color:white; background:rgba(255,255,255,0.15); padding: 8px 14px; border-radius: 8px; text-decoration:none; font-size:14px;">Meu Perfil</a>
+        </div>
     </header>
 
     <div class="feed-container">

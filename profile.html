@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/global.css">
+    <title>Meu Perfil Sustentável</title>
+    <style>
+        .profile-header { text-align: center; padding: 30px 20px; background: white; border-bottom: 5px solid #2d5a27; }
+        .profile-pic { width: 100px; height: 100px; background: #2d5a27; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; margin: 0 auto 15px; border: 4px solid #e8f5e9; }
+        
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+        .stat-box { background: white; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .stat-box span { display: block; font-size: 20px; font-weight: bold; color: #2d5a27; }
+        
+        .progress-container { background: white; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        .progress-bar { background: #eee; border-radius: 10px; height: 20px; overflow: hidden; margin-top: 10px; }
+        .progress-fill { background: #38a169; width: 65%; height: 100%; transition: 0.5s; }
+        
+        .badges-section { background: white; padding: 20px; border-radius: 10px; }
+        .badge-list { display: flex; gap: 15px; justify-content: center; margin-top: 10px; }
+        .badge-item { filter: grayscale(100%); opacity: 0.5; transition: 0.3s; text-align: center; font-size: 10px; }
+        .badge-item.earned { filter: grayscale(0%); opacity: 1; }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav" style="padding-top: 0;">
+        <a href="/">Ver Feed</a>
+    </div>
+
+    <div class="profile-header">
+        <div class="profile-pic">A</div>
+        <h2>Ane (Lua)</h2>
+        <p style="color: #666;">Setor: Gestão de TI | Equipe Alpha</p>
+    </div>
+
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span>12</span>
+                Ações 5S
+            </div>
+            <div class="stat-box">
+                <span>03</span>
+                Anomalias
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <strong>Nível: Especialista 5S</strong>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p style="font-size: 12px; margin-top: 5px; color: #666;">Faltam 350 pts para o nível Mestre</p>
+        </div>
+
+        <div class="badges-section">
+            <h3 style="margin-top: 0; font-size: 16px;">Minhas Conquistas</h3>
+            <div class="badge-list">
+                <div class="badge-item earned">
+                    <span style="font-size: 40px;">🌿</span>
+                    <p>Mestre 5S</p>
+                </div>
+                <div class="badge-item earned">
+                    <span style="font-size: 40px;">🚨</span>
+                    <p>Sentinela</p>
+                </div>
+                <div class="badge-item">
+                    <span style="font-size: 40px;">💡</span>
+                    <p>Eco-Líder</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="/" class="nav-link" style="display: block; margin-top: 30px; text-align: center;">Ver Feed</a>
+    </div>
+
+</body>
+</html>

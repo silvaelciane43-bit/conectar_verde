@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enviar Ação Verde</title>
-    <style>
-        /* CSS Simples para deixar o formulário bonito */
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f4; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
-        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); width: 100%; max-width: 400px; border-top: 5px solid #2d5a27; }
-        h2 { color: #2d5a27; text-align: center; margin-bottom: 20px; }
-        label { display: block; margin-top: 15px; font-weight: bold; color: #444; }
-        textarea, input[type="file"] { width: 100%; padding: 10px; margin-top: 8px; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
-        button { width: 100%; background: #2d5a27; color: white; border: none; padding: 12px; border-radius: 8px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; transition: 0.3s; }
-        button:hover { background: #1e3d1a; }
-    </style>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="stylesheet" href="/static/css/enviar.css">
 </head>
 <body>
+
+    <div class="top-nav">
+        <a href="/perfil">Meu Perfil</a>
+    </div>
 
     <div class="card">
         <h2>Minha Ação Sustentável</h2>
         
+        {% if erro %}
+        <div style="background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #c62828;">
+            ⚠️ {{ erro }}
+        </div>
+        {% endif %}
         <form action="/enviar" method="POST" enctype="multipart/form-data">
             
             <label for="descricao">O que você mudou hoje? (Ex: 5S na bancada)</label>
@@ -29,10 +29,13 @@
             <label for="foto">Anexe sua foto (Antes/Depois)</label>
             <input type="file" id="foto" name="foto" accept="image/*" required>
             
+            <div id="image-preview"></div>
+            
             <button type="submit">Enviar para Avaliação</button>
         
         </form>
     </div>
 
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

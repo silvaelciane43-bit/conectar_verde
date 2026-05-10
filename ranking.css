@@ -1,0 +1,102 @@
+/* ========== ESTILOS ESPECÍFICOS DO RANKING (RANKING.HTML) ========== */
+
+body {
+    padding: 20px;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: var(--branco);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container h2 {
+    color: var(--verde-escuro);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* ========== TABELA DE RANKING ========== */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.ranking-table th {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.ranking-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--cinza-borda);
+}
+
+.ranking-table tr:hover {
+    background-color: var(--verde-claro);
+}
+
+/* ========== DESTAQUE TOP 3 ========== */
+.top-3 {
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.top-3 td:first-child {
+    font-size: 18px;
+}
+
+/* ========== SEÇÃO DE CERTIFICADOS/BADGES ========== */
+.certificates {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 15px;
+    background: var(--verde-claro);
+    border-radius: 10px;
+}
+
+.badge {
+    text-align: center;
+    font-size: 12px;
+    color: var(--verde-escuro);
+    flex: 1;
+}
+
+.badge-icon {
+    font-size: 30px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ========== LINKS DE NAVEGAÇÃO ========== */
+.nav-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: var(--verde-escuro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+    background: var(--verde-claro);
+    text-decoration: none;
+}
